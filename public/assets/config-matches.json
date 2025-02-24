@@ -22,7 +22,7 @@
         {
           "name": "Left Starting Zone",
           "type": "checkbox",
-          "col":4
+          "col":3
         },
         {
           "type": "spacer",
@@ -32,94 +32,95 @@
           "name": "Remove Algae",
           "type": "heading",
           "prefix": "Auto",
-          "col": 2
+          "row": 3,
+          "col": 3,
+          "align": "center"
         },
         {
           "name": "Low",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 3,
-          "col": 3
+          "col": 4
         },
         {
           "name": "High",
           "type": "spinbox",
           "prefix": "Auto",
-          "row": 3,
-          "col": 5
+          "row": 4,
+          "col": 4
         },
         {
           "name": "Scoring Algae",
           "type": "heading",
-          "col":2
+          "row": 5,
+          "col":3
         },
         {
           "name": "Net",
           "type": "spinbox",
           "prefix": "Auto",
-          "col": 3,
-          "row": 4
+          "col": 4,
+          "row": 5
         },
         {
           "name": "Proccesor",
           "type": "spinbox",
           "prefix": "Auto",
-          "col": 5,
-          "row" :4
+          "col": 4,
+          "row" :6
         },
         {
           "name": "Scoring Coral",
           "type": "heading",
-          "col": 2
+          "col": 3,
+          "row" :7
         },
         {
           "name": "L1 Corals",
           "type": "spinbox",
           "prefix": "Auto",
-          "row": 5,
-          "col": 3
+          "row": 7,
+          "col": 4
         },
         {
           "name": "L2 Corals",
           "type": "spinbox",
           "prefix": "Auto",
-          "row": 5,
-          "col": 5
+          "row": 8,
+          "col": 4
         },
         {
           "name": "L3 Corals",
           "type": "spinbox",
           "prefix": "Auto",
-          "col": 3
+          "col": 4,
+          "row" :9
         },
         {
           "name": "L4 Corals",
           "type": "spinbox",
           "prefix": "Auto",
-          "col": 5,
-          "row": 6
+          "col": 4,
+          "row": 10
         },
         {
-          "name": "Pick-up Locations",
+          "name": "Coral Pick-up",
           "type": "heading",
-          "col": 4
-        },
-        {
-          "name": "Coral",
-          "type": "heading",
-          "col": 2
+          "col": 3,
+          "row" :11
         },
         {
           "name": "Ground",
           "type": "checkbox",
-          "col": 3,
-          "row": 8
+          "col": 4,
+          "row": 11
         },
         {
           "name": "HP Station",
           "type": "checkbox",
           "col": 4,
-          "row": 8
+          "row": 12
         }
       ]
     },

@@ -42,6 +42,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
   margin: 0;
+  font-size: 120%;
 }
 
 button {
@@ -55,7 +56,7 @@ input, select, textarea {
 }
 
 button, input, select, textarea {
-  font-size: 100%;
+  font-size: 150%;
   border: none;
 }
 
