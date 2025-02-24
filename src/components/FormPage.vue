@@ -36,8 +36,9 @@ defineExpose({ title: props.title, setShown: (value: boolean) => show = value })
 <style>
 .grid {
   display: grid;
-  align-items: center;
-  gap: 12px;
+  align-items: end;
+  gap: 1px;
+  grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 .center {
