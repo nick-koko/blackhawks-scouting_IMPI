@@ -26,7 +26,7 @@ config.name = name ?? "";
   display: grid;
   height: 100vh;
   gap: 40px;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 2fr auto;
   justify-items: center;
 }
 </style>

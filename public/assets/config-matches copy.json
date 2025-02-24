@@ -35,14 +35,14 @@
           "col": 2
         },
         {
-          "name": "Low",
+          "name": "L2.5",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 3,
           "col": 3
         },
         {
-          "name": "High",
+          "name": "L3.5",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 3,
@@ -73,7 +73,7 @@
           "col": 2
         },
         {
-          "name": "L1 Corals",
+          "name": "Trough Corals",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 5,
@@ -105,21 +105,56 @@
           "col": 4
         },
         {
-          "name": "Coral",
+          "name": "Algae",
           "type": "heading",
           "col": 2
         },
         {
-          "name": "Ground",
+          "name": "A1",
           "type": "checkbox",
           "col": 3,
           "row": 8
         },
         {
-          "name": "HP Station",
+          "name": "A2",
           "type": "checkbox",
           "col": 4,
           "row": 8
+        },
+        {
+          "name": "A3",
+          "type": "checkbox",
+          "col": 6,
+          "row": 8
+        },
+        {
+          "name": "Coral",
+          "type": "heading",
+          "col": 2
+        },
+        {
+          "name": "C1",
+          "type": "checkbox",
+          "col": 3,
+          "row": 9
+        },
+        {
+          "name": "C2",
+          "type": "checkbox",
+          "col": 4,
+          "row": 9
+        },
+        {
+          "name": "C3",
+          "type": "checkbox",
+          "col": 6,
+          "row": 9
+        },
+        {
+          "name": "C Station",
+          "type": "checkbox",
+          "col": 5,
+          "row": 11
         }
       ]
     },
@@ -148,13 +183,13 @@
           "row": 3
         },
         {
-          "name": "Reef Low",
+          "name": "Reef L2.5",
           "type": "spinbox",
           "row": 3,
           "col": 3
         },
         {
-          "name": "Reef High",
+          "name": "Reef L3.5",
           "type": "spinbox",
           "row": 4,
           "col": 2
@@ -178,13 +213,19 @@
           "row": 6,
           "col": 3
         },
-
+        {
+          "name": "Trough",
+          "type": "spinbox",
+          "row": 7,
+          "col":2
+        },
+    
         {
           "name": "Scoring",
           "type": "heading",
           "align": "center",
           "col": 3
-
+    
         },
 
         {
@@ -215,7 +256,7 @@
           "row": 10
         },
         {
-          "name": "Coral L1",
+          "name": "Coral Trough",
           "type": "spinbox",
           "col": 2,
           "row": 10
@@ -243,6 +284,18 @@
           "name":"My nono square",
           "type": "spacer",
           "height": 15
+        },
+        {
+          "name": "Assists",
+          "type": "checkbox",
+          "col": 2,
+          "align": "center"
+        },
+        {
+          "name": "Rescore",
+          "type": "spinbox",
+          "col":2,
+          "align": "center"
         },
         {
           "name": "Dropped Corals",
@@ -280,6 +333,15 @@
             "None"
           ],
           "default": 3
+        },
+        {
+          "name": "Barge RP",
+          "type": "checkbox"
+        },
+
+        {
+          "name": "Mechanical Failures",
+          "type": "text"
         },
         {
         "name": "Scouter Name",

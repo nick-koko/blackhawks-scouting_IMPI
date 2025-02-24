@@ -27,7 +27,7 @@
         <input type="checkbox" v-model="excludeHeaders" id="exclude-headers" />
         <label for="exclude-headers">Exclude headers in code</label>
       </div>
-      <qrcode-vue :value="qrData" level="M" render-as="svg" :size="350" />
+      <qrcode-vue :value="qrData" level="M" render-as="svg" :size="300" />
     </div>
   </dialog>
 </template>
@@ -47,7 +47,7 @@ function launchConfetti() {
     particleCount: 100,
     spread: 160,
     gravity: 4,
-    
+
   });
   confetti({
     particleCount: 100,
@@ -75,12 +75,12 @@ const excludeHeaders = $ref(false);
 
 function clearForm() {
   widgets.save();
-  
+
   launchConfetti();
   setTimeout(() => {
     router.go(0); // Reload the page
   }, 1000);
-  
+
 }
 
 defineExpose({ title: computed(() => page?.title), setShown: computed(() => page?.setShown) });

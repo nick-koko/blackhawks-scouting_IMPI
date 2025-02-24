@@ -87,7 +87,7 @@ function calcGridPos(name: PosName): number[][] {
 
   /* Label tags are set to increase font size, these are not: */
   .label>span {
-    font-size: 120%;
+    font-size: 320%;
   }
 }
 </style>
