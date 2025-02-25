@@ -37,16 +37,16 @@
           "align": "left"
         },
         {
-          "name": "Low",
+          "name": "Reef Low",
           "type": "spinbox",
-          "prefix": "Auto",
+          "prefix": "AutoAlgaePickup",
           "row": 3,
           "col": 4
         },
         {
-          "name": "High",
+          "name": "Reef High",
           "type": "spinbox",
-          "prefix": "Auto",
+          "prefix": "AutoAlgaePickup",
           "row": 4,
           "col": 4
         },
@@ -77,28 +77,28 @@
           "row" :7
         },
         {
-          "name": "L1 Corals",
+          "name": "L1 Coral",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 7,
           "col": 4
         },
         {
-          "name": "L2 Corals",
+          "name": "L2 Coral",
           "type": "spinbox",
           "prefix": "Auto",
           "row": 8,
           "col": 4
         },
         {
-          "name": "L3 Corals",
+          "name": "L3 Coral",
           "type": "spinbox",
           "prefix": "Auto",
           "col": 4,
           "row" :9
         },
         {
-          "name": "L4 Corals",
+          "name": "L4 Coral",
           "type": "spinbox",
           "prefix": "Auto",
           "col": 4,
@@ -113,12 +113,14 @@
         {
           "name": "Ground",
           "type": "checkbox",
+          "prefix": "AutoCoralPickup",
           "col": 4,
           "row": 11
         },
         {
           "name": "HP Station",
           "type": "checkbox",
+          "prefix": "AutoCoralPickup",
           "col": 4,
           "row": 12
         }
@@ -139,18 +141,21 @@
         {
           "name": "Ground",
           "type": "spinbox",
+          "prefix": "TeleopAlgaePickup",
           "col": 4,
           "row": 2
         },
         {
           "name": "Reef Low",
           "type": "spinbox",
+          "prefix": "TeleopAlgaePickup",
           "row": 3,
           "col": 4
         },
         {
           "name": "Reef High",
           "type": "spinbox",
+          "prefix": "TeleopAlgaePickup",
           "row": 4,
           "col": 4
         },
@@ -164,12 +169,14 @@
         {
           "name": "Ground",
           "type": "spinbox",
+          "prefix": "TeleopCoralPickup",
           "col": 4,
           "row": 5
         },
         {
           "name": "HP Station",
           "type": "spinbox",
+          "prefix": "TeleopCoralPickup",
           "row": 6,
           "col": 4
         },
@@ -183,12 +190,14 @@
         {
           "name": "Net",
           "type": "spinbox",
+          "prefix": "Teleop",
           "col": 4,
           "row": 8
         },
         {
           "name": "Proccesor",
           "type": "spinbox",
+          "prefix": "Teleop",
           "row": 9,
           "col": 4
         },
@@ -199,26 +208,30 @@
           "row": 10
         },
         {
-          "name": "Coral L1",
+          "name": "L1 Coral",
           "type": "spinbox",
+          "prefix": "Teleop",
           "col": 4,
           "row": 10
         },
         {
-          "name": "Coral L2",
+          "name": "L2 Coral",
           "type": "spinbox",
+          "prefix": "Teleop",
           "row": 11,
           "col": 4
         },
         {
-          "name": "Coral L3",
+          "name": "L3 Coral",
           "type": "spinbox",
+          "prefix": "Teleop",
           "col": 4,
           "row": 12
         },
         {
-          "name": "Coral L4",
+          "name": "L4 Coral",
           "type": "spinbox",
+          "prefix": "Teleop",
           "row": 13,
           "col": 4
         },
@@ -242,32 +255,58 @@
         {
           "name": "End Location",
           "type": "radio",
+          "prefix": "Climb",
           "options": [
             "Deep",
             "Shallow",
             "Parked",
             "None"
           ],
-          "default": 3
+          "default": 3,
+          "col": 4,
+          "row" :1
+
+        },
+        {
+          "name":"Spacer1",
+          "type": "spacer",
+          "height": 15
         },
         {
           "name": "Failed Climb",
-          "type": "checkbox"
+          "type": "checkbox",
+          "col": 4,
+          "row" :4
+        },
+        {
+          "name":"Spacer2",
+          "type": "spacer",
+          "height": 15
         },
         {
           "name": "Robot Position",
           "type": "radio",
+          "prefix": "Endgame",
           "options": [
             "1",
             "2",
             "3",
             "None"
           ],
-          "default": 3
+          "default": 3,
+          "col": 4,
+          "row" :7
+        },
+        {
+          "name":"Spacer3",
+          "type": "spacer",
+          "height": 15
         },
         {
         "name": "Scouter Name",
           "type": "text",
+          "col": 4,
+          "row" :10,
           "validation": {
             "comparison": "greater",
             "value": 0
