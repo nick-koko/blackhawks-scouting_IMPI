@@ -1,5 +1,5 @@
 <template>
-  <h1>IMPI Warrior Scouting</h1>
+  <h1>Impi Scouting</h1>
   <h2>Form Selection</h2>
   <ul v-if="list.length > 0" class="link-list">
     <li v-for="[i, name] of list.entries()" :key="i">
@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import { FetchError } from "@/common/shared";
 
-const version = APP_VERSION;
+const version = "2025 Competition 1";
 
 // Fetch configurations list
 const fetchResult = await fetch(`${import.meta.env.BASE_URL}assets/configurations.txt`);

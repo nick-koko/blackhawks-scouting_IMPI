@@ -25,9 +25,9 @@ export default defineConfig({
     VitePWA({
       includeAssets: ["assets/*", "icons/*"],
       manifest: {
-        name: "IMPI Warriors Scouting",
+        name: "Impi Warriors Scouting",
         short_name: "Scouting",
-        description: "A scouting app by FRC Team 2834",
+        description: "A scouting app by FRC Team 2834 modified by Team 1025",
         theme_color: "#292929",
         background_color: "#292929",
         icons: [

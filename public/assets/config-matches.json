@@ -1,13 +1,30 @@
 {
-  "heading": "Reefscape - 2025 v1",
+  "heading": "Impi Scouting - 2025 v1",
   "logo": "logo.png",
   "pages": [
     {
       "name": "Setup",
       "widgets": [
         {
+          "name": "Scouter Name",
+            "type": "text",
+            "col": 3,
+            "row" :1,
+            "validation": {
+              "comparison": "greater",
+              "value": 0
+          }
+        },
+        {
+          "name":"My nono square",
+          "type": "spacer",
+          "height": 35
+        },
+        {
          "name": "Starting Position",
           "type": "dropdown",
+          "col": 3,
+          "row" :3,
           "options": [
             "Center",
             "Proccesor Side",
@@ -301,17 +318,7 @@
           "name":"Spacer3",
           "type": "spacer",
           "height": 15
-        },
-        {
-        "name": "Scouter Name",
-          "type": "text",
-          "col": 4,
-          "row" :10,
-          "validation": {
-            "comparison": "greater",
-            "value": 0
         }
-      }
       ]
     }
   ]
