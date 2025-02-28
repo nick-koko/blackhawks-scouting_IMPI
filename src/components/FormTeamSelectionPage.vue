@@ -2,8 +2,8 @@
   <FormPage title="Team Selection" ref="page">
     <FormGroup :label-type="LabelType.LabelTag" id="select-type-input" name="Selection Type">
       <select id="select-type-input" v-model.number="selectType">
-        <option value="0">The Blue Alliance</option>
-        <option value="1">Manual</option>
+        <option value="0">Manual</option>
+        <option value="1">The Blue Alliance</option>
       </select>
     </FormGroup>
     <FormGroup :show="isTBA" :label-type="LabelType.LabelTag" id="event-key-input" name="Event Key">
@@ -20,7 +20,10 @@
       </select>
     </FormGroup>
     <FormGroup :label-type="LabelType.LabelTag" id="match-input" name="Match Number">
-      <input id="match-input" type="number" v-model.lazy="matchNumber" :min="1" />
+      <input id="match-input" type="number" v-model.number="matchNumber" :class="{ 'is-invalid': !isMatchNumberValid }">
+    </FormGroup>
+    <FormGroup :label-type="LabelType.LabelTag" id="match-error" >
+      <div v-if="!isMatchNumberValid" class="invalid-feedback">Match Number must be greater than 0</div>
     </FormGroup>
     <FormGroup :show="isTBA" :label-type="LabelType.LabelTag" id="team-input" name="Team">
       <span v-if="currentMatch === null">&lt;No Data&gt;</span>
@@ -31,7 +34,10 @@
       </select>
     </FormGroup>
     <FormGroup :show="!isTBA" :label-type="LabelType.LabelTag" id="team-number-input" name="Team Number">
-      <input type="number" v-model="teamNumberManual">
+      <input id="team-number-input" type="number" requred v-model="teamNumberManual" :class="{ 'is-invalid': !isTeamNumberValid }">
+    </FormGroup>
+        <FormGroup :label-type="LabelType.LabelTag" id="teamNum-error" >
+      <div v-if="!isTeamNumberValid" class="invalid-teamfeedback">Team Number must be greater than 0</div>
     </FormGroup>
     <FormGroup :show="!isTBA" :label-type="LabelType.LabelTag" id="team-color-input" name="Team Color">
       <select id="team-color-input" v-model="teamColorManual">
@@ -68,7 +74,7 @@ const widgets = useWidgetsStore();
 const selectType = $ref(0);
 let eventKey = $ref("");
 const matchLevel = $ref(0);
-const matchNumber = $ref(1);
+const matchNumber = $ref(12);
 const selectedTeam = $ref(0);
 
 const teamNumberManual = $ref(0);
@@ -80,7 +86,7 @@ let matchesLoadStatus = $ref("");
 const teams = $ref<unknown[]>();
 const matches = $ref<unknown[]>();
 
-const isTBA = $computed(() => selectType === 0);
+const isTBA = $computed(() => selectType === 1);
 
 // The match data based on the selected level and number
 const currentMatch = $computed(() => {
@@ -155,11 +161,39 @@ function loadTBAData() {
   matchesLoadStatus = "Loading...";
   tba.load(eventKey, "matches").then(value => updateStatus($$(matchesLoadStatus), $$(matches), value));
 }
+
+
+const isMatchNumberValid = computed(() => {
+  console.log('Evaluating isMatchNumberValid with:', matchNumber, 'type:', typeof matchNumber);
+
+  // Convert to number and handle edge cases
+  const numValue = Number(matchNumber);
+  const isValid = !isNaN(numValue) && numValue > 0;
+
+  console.log('isMatchNumberValid result:', isValid);
+  return isValid;
+});
+
+const isTeamNumberValid = computed(() => {
+  console.log('Evaluating isTeamNumberValid with:', teamNumberManual, 'type:', typeof teamNumberManual);
+
+  // Convert to number and handle edge cases
+  const numValue = Number(teamNumberManual);
+  const isValid = !isNaN(numValue) && numValue > 0;
+
+  console.log('isTeamNumberValid result:', isValid);
+  return isValid;
+});
 </script>
 
 <style>
 #team-input {
   width: 250px;
   text-overflow: ellipsis;
+}
+
+.is-invalid {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgb(252, 0, 0);
 }
 </style>

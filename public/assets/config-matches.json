@@ -309,6 +309,15 @@
           "name":"Spacer2",
           "type": "spacer",
           "height": 15
+       },
+       {
+          "name": "Comments",
+          "type": "textarea"
+        },
+        {
+          "name":"Spacer2",
+          "type": "spacer",
+          "height": 15
         },
         {
           "name": "Robot Position",
@@ -321,7 +330,7 @@
             "None"
           ],
           "col": 1,
-          "row" :7
+          "row" :8
         },
         {
           "name":"Spacer3",
@@ -332,7 +341,7 @@
           "type": "picture",
           "file": "barge_numbers.png",
           "colspan": 2,
-          "row" :9
+          "row" :10
         }
       ]
     }
