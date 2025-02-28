@@ -8,7 +8,7 @@
         {
           "name": "Scouter Name",
             "type": "text",
-            "col": 3,
+            "col": 1,
             "row" :1,
             "validation": {
               "comparison": "greater",
@@ -18,18 +18,29 @@
         {
           "name":"My nono square",
           "type": "spacer",
-          "height": 35
+          "height": 25
         },
         {
          "name": "Starting Position",
           "type": "dropdown",
-          "col": 3,
+          "col": 1,
           "row" :3,
           "options": [
-            "Center",
-            "Proccesor Side",
-            "Barge Side"
+            "1",
+            "2",
+            "3"
           ]
+        },
+        {
+          "name":"Space",
+          "type": "spacer",
+          "height": 15
+        },
+        {
+          "type": "picture",
+          "file": "field_numbers.png",
+          "colspan": 2,
+          "row" :5
         }
       ]
     },
@@ -271,28 +282,27 @@
       "widgets": [
         {
           "name": "End Location",
-          "type": "radio",
+          "type": "dropdown",
           "prefix": "Climb",
           "options": [
-            "Deep",
-            "Shallow",
+            "None",
             "Parked",
-            "None"
+            "Shallow",
+            "Deep"
           ],
-          "default": 3,
-          "col": 4,
+          "col": 1,
           "row" :1
 
         },
         {
           "name":"Spacer1",
           "type": "spacer",
-          "height": 15
+          "height": 5
         },
         {
           "name": "Failed Climb",
           "type": "checkbox",
-          "col": 4,
+          "col": 1,
           "row" :4
         },
         {
@@ -302,7 +312,7 @@
         },
         {
           "name": "Robot Position",
-          "type": "radio",
+          "type": "dropdown",
           "prefix": "Endgame",
           "options": [
             "1",
@@ -310,14 +320,19 @@
             "3",
             "None"
           ],
-          "default": 3,
-          "col": 4,
+          "col": 1,
           "row" :7
         },
         {
           "name":"Spacer3",
           "type": "spacer",
-          "height": 15
+          "height": 10
+        },
+        {
+          "type": "picture",
+          "file": "barge_numbers.png",
+          "colspan": 2,
+          "row" :9
         }
       ]
     }

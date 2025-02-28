@@ -1,5 +1,7 @@
 <template>
   <h1>Impi Scouting</h1>
+  <h5>"Remember Ian is always watching"</h5>
+  <img src="/assets/ian2.webp" alt="Cannot load logo file" width="200" height="200" class="center">
   <h2>Form Selection</h2>
   <ul v-if="list.length > 0" class="link-list">
     <li v-for="[i, name] of list.entries()" :key="i">
