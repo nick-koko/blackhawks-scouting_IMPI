@@ -74,7 +74,7 @@ const widgets = useWidgetsStore();
 const selectType = $ref(0);
 let eventKey = $ref("");
 const matchLevel = $ref(0);
-const matchNumber = $ref(12);
+const matchNumber = $ref(0);
 const selectedTeam = $ref(0);
 
 const teamNumberManual = $ref(0);
